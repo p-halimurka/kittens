@@ -1,0 +1,17 @@
+<%= form_with model: @kitten do |f| %>
+  <div>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.number_field :age %>
+  </div>
+  <div>
+    <%=  f.number_field :cuteness %>
+  </div>
+  <div>
+    <%= f.number_field :softness %>
+  </div>
+  <div>
+    <%= f.submit("Create kitten", class: "button is-dark is-outlined") %>
+  </div>
+<% end %>
