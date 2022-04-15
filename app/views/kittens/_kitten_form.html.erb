@@ -1,4 +1,4 @@
-<%= form_with model: @kitten do |f| %>
+<%= form_with model: @kitten do | f | %>
   <div>
     <%= f.text_field :name %>
   </div>
@@ -6,12 +6,12 @@
     <%= f.number_field :age %>
   </div>
   <div>
-    <%=  f.number_field :cuteness %>
+    <%= f.number_field :cuteness, {prompt:"Cuteness level"} %>
   </div>
   <div>
-    <%= f.number_field :softness %>
+    <%= f.number_field :softness, {prompt:"Softness level"} %>
   </div>
   <div>
-    <%= f.submit("Create kitten", class: "button is-dark is-outlined") %>
+    <%= f.submit("Kitten", class: "button is-dark is-outlined") %>
   </div>
-<% end %>
+<% end %> 

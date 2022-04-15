@@ -1,6 +1,20 @@
 <h1>Single kitten</h1>
 
-<%= @kitten.name %>
-<%= @kitten.age %>
-<%= @kitten.cuteness %>
-<%= @kitten.softness %>
+<table>
+  <tr>
+    <th>Kitten's name</th>
+    <th>Kitten's age</th>
+    <th>Kitten's cuteness</th>
+    <th>Kitten's softness</th>
+  </tr>
+  <tr>
+    <td> <%= @kitten.name %> </td>
+    <td> <%= @kitten.age %> </td>
+    <td> <%= @kitten.cuteness %> </td>
+    <td> <%= @kitten.softness %> </td>
+  </tr>
+</table>
+
+
+
+<%= link_to "Delete kitten", @kitten, method: :delete, data: { confirm: "Are you sure?"}%>

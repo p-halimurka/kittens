@@ -1,7 +1,11 @@
 <h1>Kittens app</h1>
+<p><%= link_to "Create new kitten", "kittens/new" %></p>
 
 <ul>
-  <% @kittens.each do | kitten | %>
-      <li> <%= kitten.name %> </li>
+  <% @kittens.each do | kitten | %><br/>
+      <li> Kitten's name <%= kitten.name %> | <%= link_to "Delete_kitten", kitten, method: :delete, data: { confirm: "Are you sure?"}%> | <%= link_to "Edit_kitten", "kittens/#{kitten.id}/edit" %> </li>
+      <li> Kittens's age <%= kitten.age %> </li>
+      <li> Kitten's cuteness <%= kitten.cuteness %> </li>
+      <li> Kitten's softness <%= kitten.softness %> </li>
   <% end %>
 </ul>
